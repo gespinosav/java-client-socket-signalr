@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'clientsocketr'
+version '1.0-SNAPSHOT'
+
+
+sourceCompatibility = 1.8
+mainClassName = 'Main'
+
+sourceSets {
+    main.java.srcDir "src/main/java"
+    test.java.srcDir "src/main/test"
+}
+
+jar {
+    from configurations.compile.collect { zipTree it }
+    manifest.attributes 'Main-Class': 'Main'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.microsoft.signalr:signalr:3.0.0-preview-19075-0444'
+}
