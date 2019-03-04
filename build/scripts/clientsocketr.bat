@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\clientsocketr-1.0-SNAPSHOT.jar;%APP_HOME%\lib\signalr-3.0.0-preview-19075-0444.jar;%APP_HOME%\lib\rxjava-2.2.3.jar;%APP_HOME%\lib\gson-2.8.5.jar;%APP_HOME%\lib\okhttp-3.11.0.jar;%APP_HOME%\lib\slf4j-api-1.7.25.jar;%APP_HOME%\lib\reactive-streams-1.0.2.jar;%APP_HOME%\lib\okio-1.14.0.jar
+set CLASSPATH=%APP_HOME%\lib\clientsocketr-1.0-SNAPSHOT.jar;%APP_HOME%\lib\signalr-3.0.0-preview-19075-0444.jar;%APP_HOME%\lib\slf4j-jdk14-1.7.25.jar;%APP_HOME%\lib\rxjava-2.2.3.jar;%APP_HOME%\lib\gson-2.8.5.jar;%APP_HOME%\lib\okhttp-3.11.0.jar;%APP_HOME%\lib\slf4j-api-1.7.25.jar;%APP_HOME%\lib\reactive-streams-1.0.2.jar;%APP_HOME%\lib\okio-1.14.0.jar
 
 @rem Execute clientsocketr
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %CLIENTSOCKETR_OPTS%  -classpath "%CLASSPATH%" Main %CMD_LINE_ARGS%
